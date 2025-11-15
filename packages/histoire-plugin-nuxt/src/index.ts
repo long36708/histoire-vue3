@@ -135,7 +135,7 @@ async function useNuxtViteConfig() {
   }
   const runtimeDir = fileURLToPath(new URL('../runtime', import.meta.url))
   nuxt.options.build.templates.push(
-    { src: join(runtimeDir, 'composables.mjs'), filename: 'histoire/composables.mjs' },
+    { src: join(runtimeDir, 'composables.mjs'), filename: 'longmo-histoire/composables.mjs' },
     { src: join(runtimeDir, 'components.mjs'), filename: 'histoire/components.mjs' },
   )
 

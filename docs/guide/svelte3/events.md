@@ -7,7 +7,7 @@ The first parameter is the name of the event, and the second one is a data objec
 ```svelte{3,11-12}
 <script>
   import EventButton from './EventButton.svelte'
-  import { logEvent } from 'histoire/client'
+  import { logEvent } from 'longmo-histoire/client'
 
   export let Hst
 </script>

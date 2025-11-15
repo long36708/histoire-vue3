@@ -7,7 +7,7 @@ You can access various APIs meant to be used inside stories from the `histoire/c
 Logs an event in the `Events` sidepane.
 
 ```js
-import { logEvent } from 'histoire/client'
+import { logEvent } from 'longmo-histoire/client'
 
 logEvent('click', { some: 'data' })
 ```
@@ -17,7 +17,7 @@ logEvent('click', { some: 'data' })
 Returns `true` if the story is executing through the NodeJS server.
 
 ```js
-import { isCollecting } from 'histoire/client'
+import { isCollecting } from 'longmo-histoire/client'
 
 if (!isCollecting()) {
   // do something only in the browser
@@ -29,7 +29,7 @@ if (!isCollecting()) {
 Returns `true` if dark mode is enabled.
 
 ```js
-import { isDark } from 'histoire/client'
+import { isDark } from 'longmo-histoire/client'
 
 if (isDark()) {
   // do something only in dark mode
@@ -43,7 +43,7 @@ if (isDark()) {
 Toggles dark mode. If `value` is provided, it will be used instead of toggling. Returns the new value.
 
 ```js
-import { toggleDark } from 'histoire/client'
+import { toggleDark } from 'longmo-histoire/client'
 
 toggleDark(true)
 ```

@@ -1,5 +1,5 @@
 <script setup>
-import { logEvent } from 'histoire/client'
+import { logEvent } from 'longmo-histoire/client'
 import { ref } from 'vue'
 
 const text = ref('Click me!')

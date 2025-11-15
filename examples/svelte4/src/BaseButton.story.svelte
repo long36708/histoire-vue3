@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { logEvent } from 'histoire/client'
+  import { logEvent } from 'longmo-histoire/client'
   import type { Hst } from 'histoire-plugin-svelte'
   import BaseButton from './BaseButton.svelte'
 

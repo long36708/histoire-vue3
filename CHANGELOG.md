@@ -1858,7 +1858,7 @@ Update imports:
 Before:
 
 ```ts
-import { defineVue3StorySetup } from 'histoire/client'
+import { defineVue3StorySetup } from 'longmo-histoire/client'
 
 export default defineVue3StorySetup(({ app }) => {
   app.provide('demo', 42)
@@ -1868,7 +1868,7 @@ export default defineVue3StorySetup(({ app }) => {
 After:
 
 ```ts
-import { defineSetupVue3 } from 'histoire/client'
+import { defineSetupVue3 } from 'longmo-histoire/client'
 
 export const setupVue3 = defineSetupVue3(({ app }) => {
   app.provide('demo', 42)

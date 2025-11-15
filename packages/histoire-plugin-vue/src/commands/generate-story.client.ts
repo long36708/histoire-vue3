@@ -1,6 +1,6 @@
 import type { ClientCommandOptions } from 'longmo-histoire'
 import { kebabCase } from 'change-case'
-import { openStory, sendEvent } from 'histoire/plugin'
+import { openStory, sendEvent } from 'longmo-histoire/plugin'
 
 export default {
   prompts: [

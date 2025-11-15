@@ -7,7 +7,7 @@ The first parameter is the name of the event, and the second one is a data objec
 ```vue{3,10,11}
 <script lang="ts" setup>
 import EventButton from './EventButton.vue'
-import { logEvent } from 'histoire/client'
+import { logEvent } from 'longmo-histoire/client'
 </script>
 
 <template>
