@@ -18,8 +18,8 @@ Learn more about configuring Histoire [here](../guide/config.md).
 Array of plugins. Learn more about [official plugins](../guide/plugins/official.md) and [how to develop them](../guide/plugins/development.md).
 
 ```ts
-import { HstNuxt } from '@histoire/plugin-nuxt'
-import { HstVue } from '@histoire/plugin-vue'
+import { HstNuxt } from 'histoire-plugin-nuxt'
+import { HstVue } from 'histoire-plugin-vue'
 
 export default defineConfig({
   plugins: [
@@ -118,7 +118,7 @@ Properties:
 - `storeColorScheme: boolean`: Enable persistence of the color scheme in the browser's local storage.
 
 ```ts
-import { defaultColors } from 'histoire'
+import { defaultColors } from 'longmo-histoire'
 
 export default defineConfig({
   theme: {

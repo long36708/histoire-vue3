@@ -1,4 +1,4 @@
-import type { PluginCommand } from 'histoire'
+import type { PluginCommand } from 'longmo-histoire'
 import fs from 'node:fs'
 import launchEditor from 'launch-editor'
 import path from 'pathe'
@@ -34,7 +34,7 @@ import ${componentName} from './${component}'
 
     launchEditor(targetFile)
   },
-  clientSetupFile: '@histoire/plugin-vue/dist/commands/generate-story.client.js',
+  clientSetupFile: 'histoire-plugin-vue/dist/commands/generate-story.client.js',
 } as PluginCommand
 
 async function isComponentTs(component: string) {

@@ -1,10 +1,10 @@
-import { defineSetupVue3 } from '@histoire/plugin-vue'
+import { defineSetupVue3 } from 'histoire-plugin-vue'
 import { createPinia } from 'pinia'
 import GlobalComp from './components/GlobalComp.vue'
 import WrapperGlobal from './components/WrapperGlobal.vue'
 import './histoire.css'
 
-declare module 'histoire' {
+declare module 'longmo-histoire' {
   // Extend the story `meta` prop
   interface CommonMeta {
     /**

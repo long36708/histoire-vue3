@@ -1,4 +1,4 @@
-import type { PluginCommand } from '@histoire/shared'
+import type { PluginCommand } from 'histoire-shared'
 import type { Context } from '../context.js'
 
 const serializedFields: Readonly<(keyof PluginCommand)[]> = ['id', 'label', 'prompts', 'icon', 'searchText'] as const

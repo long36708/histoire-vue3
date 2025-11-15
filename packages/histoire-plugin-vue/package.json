@@ -1,5 +1,5 @@
 {
-  "name": "@histoire/plugin-vue",
+  "name": "histoire-plugin-vue",
   "type": "module",
   "version": "1.0.0-alpha.4",
   "description": "Histoire plugin for Vue.js support",
@@ -48,13 +48,13 @@
     "watch": "concurrently \"vite build --watch\" \"tsc -d -P tsconfig.build.json --watch\" \"pnpm run build:types --watch\""
   },
   "peerDependencies": {
-    "histoire": "workspace:^",
+    "longmo-histoire": "workspace:^",
     "vue": "^3.2.47"
   },
   "dependencies": {
-    "@histoire/controls": "workspace:^",
-    "@histoire/shared": "workspace:^",
-    "@histoire/vendors": "workspace:^",
+    "histoire-controls": "workspace:^",
+    "histoire-shared": "workspace:^",
+    "histoire-vendors": "workspace:^",
     "change-case": "^5.4.4",
     "globby": "^14.0.2",
     "launch-editor": "^2.9.1",
@@ -63,7 +63,7 @@
   "devDependencies": {
     "@types/node": "^22.10.1",
     "concurrently": "^9.1.0",
-    "histoire": "workspace:*",
+    "longmo-histoire": "workspace:*",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vue": "^3.5.13"

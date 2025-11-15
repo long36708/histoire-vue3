@@ -1,4 +1,4 @@
-import type { ServerRunPayload, ServerStory, ServerVariant } from '@histoire/shared'
+import type { ServerRunPayload, ServerStory, ServerVariant } from 'histoire-shared'
 import type { StoryOptions, VariantOptions } from './types'
 
 export async function run({ file, storyData }: ServerRunPayload) {

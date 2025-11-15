@@ -1,5 +1,5 @@
 <script lang="ts">
-import { ServerStory, ServerStoryFile, ServerVariant } from '@histoire/shared'
+import { ServerStory, ServerStoryFile, ServerVariant } from 'histoire-shared'
 import { getContext, setContext } from 'svelte'
 
 export let title: string = null

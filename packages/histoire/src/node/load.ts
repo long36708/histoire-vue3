@@ -1,4 +1,4 @@
-import type { ModuleLoader } from '@histoire/shared'
+import type { ModuleLoader } from 'histoire-shared'
 import type { ViteDevServer } from 'vite'
 import { resolve } from 'pathe'
 import pc from 'picocolors'

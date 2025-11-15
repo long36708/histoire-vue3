@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { ClientCommand } from '@histoire/shared'
+import type { ClientCommand } from 'histoire-shared'
 import type { SearchResult, SearchResultType, Story, Variant } from '../../types'
 import type { SearchData } from './types'
 import { Icon } from '@iconify/vue'

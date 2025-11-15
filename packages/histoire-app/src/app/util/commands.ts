@@ -1,4 +1,4 @@
-import type { ClientCommand, ClientCommandContext } from '@histoire/shared'
+import type { ClientCommand, ClientCommandContext } from 'histoire-shared'
 import { router } from '../router.js'
 import { useStoryStore } from '../stores/story.js'
 import { openInEditor } from './open-in-editor.js'

@@ -1,4 +1,4 @@
-# @histoire/controls
+# histoire-controls
 
 Builtin controls component
 

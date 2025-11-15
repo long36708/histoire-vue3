@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { ClientCommand } from '@histoire/shared'
+import type { ClientCommand } from 'histoire-shared'
 import { nextTick, onMounted, reactive, ref } from 'vue'
 import { executeCommand, getCommandContext } from '../../util/commands.js'
 import BaseButton from '../base/BaseButton.vue'

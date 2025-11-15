@@ -1,4 +1,4 @@
-import type { Plugin, PluginApiBase } from '@histoire/shared'
+import type { Plugin, PluginApiBase } from 'histoire-shared'
 import { join } from 'pathe'
 import { getInjectedImport } from '../util/vendors.js'
 
@@ -73,7 +73,7 @@ function storyTemplate(pinceauConfig: any) {
 
   return `import 'histoire-style'
 import './style.css'
-import { createApp, h, markRaw, ref } from ${getInjectedImport('@histoire/vendors/vue')}
+import { createApp, h, markRaw, ref } from ${getInjectedImport('histoire-vendors/vue')}
 import {
   HstColorShades,
   HstTokenList,
@@ -81,7 +81,7 @@ import {
   HstText,
   HstTextarea,
   HstNumber,
-} from ${getInjectedImport('@histoire/controls')}
+} from ${getInjectedImport('histoire-controls')}
 
 const config = markRaw(${JSON.stringify(pinceauConfig, null, 2)})
 const search = ref('')

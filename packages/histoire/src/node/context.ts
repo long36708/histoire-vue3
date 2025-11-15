@@ -5,7 +5,7 @@ import type {
   PluginCommand,
   ServerMarkdownFile,
   ServerStoryFile,
-} from '@histoire/shared'
+} from 'histoire-shared'
 import type { ResolvedConfig } from 'vite'
 import { resolveConfig as resolveViteConfig } from 'vite'
 import { processConfig, resolveConfig } from './config.js'

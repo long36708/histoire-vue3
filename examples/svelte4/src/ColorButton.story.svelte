@@ -1,6 +1,6 @@
 <script lang="ts">
   import { logEvent } from 'histoire/client'
-  import type { Hst } from '@histoire/plugin-svelte'
+  import type { Hst } from 'histoire-plugin-svelte'
   import ColorButton from './ColorButton.svelte'
 
   export let Hst: Hst
@@ -19,7 +19,7 @@
     source += `>Click me !</ColorButton>`;
   }
 </script>
-  
+
 <Hst.Story title="ColorButton" {source}>
   <ColorButton {disabled} {colorselect} on:click={event => logEvent('click', event)}>
     Click me!

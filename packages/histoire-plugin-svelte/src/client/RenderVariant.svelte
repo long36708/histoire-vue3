@@ -1,5 +1,5 @@
 <script lang="ts">
-import type { Story, Variant } from '@histoire/shared'
+import type { Story, Variant } from 'histoire-shared'
 import { getContext } from 'svelte'
 
 const story: Story = getContext('__hstStory')

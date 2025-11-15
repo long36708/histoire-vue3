@@ -1,4 +1,4 @@
-import type { ServerStoryFile } from '@histoire/shared'
+import type { ServerStoryFile } from 'histoire-shared'
 import { describe, expect, it } from 'vitest'
 import { getDefaultConfig } from '../config.js'
 import { makeTree } from '../tree.js'

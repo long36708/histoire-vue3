@@ -36,21 +36,21 @@ Histoire is an Open-Source project supported by our sponsors - thank you!
 
 ## Installation
 
-Install the `histoire` and `@histoire/plugin-vue` packages into your project:
+Install the `histoire` and `histoire-plugin-vue` packages into your project:
 
 ```shell
-pnpm i -D histoire @histoire/plugin-vue
+pnpm i -D histoire histoire-plugin-vue
 # OR
-npm i -D histoire @histoire/plugin-vue
+npm i -D histoire histoire-plugin-vue
 # OR
-yarn add -D histoire @histoire/plugin-vue
+yarn add -D histoire histoire-plugin-vue
 ```
 
 Create an `histoire.config.js` or `histoire.config.ts` file in your project root to enable the Vue plugin:
 
 ```ts
-import { HstVue } from '@histoire/plugin-vue'
-import { defineConfig } from 'histoire'
+import { HstVue } from 'histoire-plugin-vue'
+import { defineConfig } from 'longmo-histoire'
 
 export default defineConfig({
   plugins: [
@@ -87,7 +87,7 @@ You can specify additional CLI options like `--port`. For a full list of CLI opt
 To enable the global components types in your project, create an `env.d.ts` file at the root of your project if it doesn't already exist.
 
 ```ts
-/// <reference types="@histoire/plugin-vue/components" />
+/// <reference types="histoire-plugin-vue/components" />
 ```
 
 And add it in the `include` field of your `tsconfig.json`.
@@ -119,18 +119,18 @@ Example:
 
 <DemoLinks framework="nuxt3" />
 
-Histoire supports Nuxt 3 with the `@histoire/plugin-nuxt` package.
+Histoire supports Nuxt 3 with the `histoire-plugin-nuxt` package.
 
 ```bash
-pnpm add -D @histoire/plugin-nuxt
+pnpm add -D histoire-plugin-nuxt
 ```
 
 Add the plugin in histoire config:
 
 ```js
-import { HstNuxt } from '@histoire/plugin-nuxt'
-import { HstVue } from '@histoire/plugin-vue'
-import { defineConfig } from 'histoire'
+import { HstNuxt } from 'histoire-plugin-nuxt'
+import { HstVue } from 'histoire-plugin-vue'
+import { defineConfig } from 'longmo-histoire'
 
 export default defineConfig({
   plugins: [

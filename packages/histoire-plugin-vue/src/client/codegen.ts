@@ -1,8 +1,8 @@
 // @TODO remove @ts-ignore
 
-import type { Variant } from '@histoire/shared'
+import type { Variant } from 'histoire-shared'
 import type { VNode } from 'vue'
-import { createAutoBuildingObject, indent, serializeJs, voidElements } from '@histoire/shared'
+import { createAutoBuildingObject, indent, serializeJs, voidElements } from 'histoire-shared'
 import { camelCase, pascalCase } from 'change-case'
 import { Text, vModelCheckbox, vModelDynamic, vModelRadio, vModelSelect, vModelText } from 'vue'
 

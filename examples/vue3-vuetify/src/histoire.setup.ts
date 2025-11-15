@@ -1,4 +1,4 @@
-import { defineSetupVue3 } from '@histoire/plugin-vue'
+import { defineSetupVue3 } from 'histoire-plugin-vue'
 
 // Vuetify
 import { createVuetify } from 'vuetify'

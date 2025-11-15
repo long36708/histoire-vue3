@@ -21,7 +21,7 @@ Example:
 
 ```ts
 // histoire.config.js
-import { defineConfig } from 'histoire'
+import { defineConfig } from 'longmo-histoire'
 
 export default defineConfig({
   // your Histoire configuration
@@ -33,14 +33,14 @@ export default defineConfig({
 The second option is to provide the Histoire config object directly in your Vite config file `vite.config.{js,ts}`. To have the correct TypeScript check, make sure to use this [triple slash directive](https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html) at the very top of your config file:
 
 ```ts
-/// <reference types="histoire" />
+/// <reference types="longmo-histoire" />
 ```
 
 Here's what your vite config file should look like:
 
 ```ts
 // vite.config.js
-/// <reference types="histoire" />
+/// <reference types="longmo-histoire" />
 
 import { defineConfig } from 'vite'
 
@@ -59,7 +59,7 @@ Sometimes you need to change some Vite configuration specifically for Histoire. 
 
 ```ts
 // histoire.config.js
-import { defineConfig } from 'histoire'
+import { defineConfig } from 'longmo-histoire'
 
 export default defineConfig({
   vite: {
@@ -70,7 +70,7 @@ export default defineConfig({
 
 ```ts
 // vite.config.js
-/// <reference types="histoire" />
+/// <reference types="longmo-histoire" />
 
 import { defineConfig } from 'vite'
 
@@ -89,7 +89,7 @@ CommonJS modules must be specified in `vite.optimizeDeps.include` to work in Dev
 
 ```ts
 // histoire.config.js
-import { defineConfig } from 'histoire'
+import { defineConfig } from 'longmo-histoire'
 
 export default defineConfig({
   vite: {
@@ -122,7 +122,7 @@ Some Vite plugins may not work well with Histoire - you can disabled them with t
 
 ```ts
 // histoire.config.js
-import { defineConfig } from 'histoire'
+import { defineConfig } from 'longmo-histoire'
 
 export default defineConfig({
   viteIgnorePlugins: [
@@ -167,7 +167,7 @@ Inside your setup file, you can export a `setupVue3` function that will be calle
 ```ts
 // src/histoire.setup.ts
 
-import { defineSetupVue3 } from '@histoire/plugin-vue'
+import { defineSetupVue3 } from 'histoire-plugin-vue'
 import { createPinia } from 'pinia'
 
 export const setupVue3 = defineSetupVue3(({ app, story, variant }) => {
@@ -210,7 +210,7 @@ Histoire provides some builtin patterns to easily change the color of the app.
 ```ts
 // histoire.config.ts
 
-import { defaultColors } from 'histoire'
+import { defaultColors } from 'longmo-histoire'
 
 export default defineConfig({
   theme: {

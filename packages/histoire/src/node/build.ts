@@ -2,7 +2,7 @@ import type {
   BuildEndCallback,
   ChangeViteConfigCallback,
   PreviewStoryCallback,
-} from '@histoire/shared'
+} from 'histoire-shared'
 import type { RollupOutput } from 'rollup'
 import type {
   InlineConfig as ViteInlineConfig,
@@ -149,7 +149,7 @@ export async function build(ctx: Context) {
       // Force chunk strategy
       config.build.rollupOptions.output = {
         manualChunks(id) {
-          if (!id.includes('@histoire/app') && id.includes('node_modules')) {
+          if (!id.includes('histoire-app') && id.includes('node_modules')) {
             for (const test of ctx.config.build?.excludeFromVendorsChunk ?? []) {
               if ((
                 typeof test === 'string' && id.includes(test)

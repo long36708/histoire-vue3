@@ -1,9 +1,9 @@
-import { applyState } from '@histoire/shared'
+import { applyState } from 'histoire-shared'
 import {
   isRef as _isRef,
   unref as _unref,
   watch as _watch,
-} from '@histoire/vendors/vue'
+} from 'histoire-vendors/vue'
 import { isRef, unref, watch } from 'vue'
 
 const isObject = val => val !== null && typeof val === 'object'

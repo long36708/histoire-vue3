@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Variant } from '@histoire/shared'
+import type { Variant } from 'histoire-shared'
 import { Icon } from '@iconify/vue'
 import { computed } from 'vue'
 import ControlsComponentStateItem from './ControlsComponentStateItem.vue'

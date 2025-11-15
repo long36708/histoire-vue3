@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { HstEvent } from '../../stores/events'
 import type { Story, Variant } from '../../types'
-import { applyState } from '@histoire/shared'
+import { applyState } from 'histoire-shared'
 import { useEventListener } from '@vueuse/core'
 import { computed, ref, toRaw, watch } from 'vue'
 import { useEventsStore } from '../../stores/events'

@@ -19,11 +19,11 @@
     "cookie": "^1.0.2"
   },
   "devDependencies": {
-    "@histoire/plugin-svelte": "workspace:*",
+    "histoire-plugin-svelte": "workspace:*",
     "@sveltejs/adapter-auto": "^3.3.1",
     "@sveltejs/kit": "^2.9.0",
     "@types/cookie": "^1.0.0",
-    "histoire": "workspace:*",
+    "longmo-histoire": "workspace:*",
     "svelte": "^5.7.0",
     "svelte-check": "^4.1.1",
     "svelte-preprocess": "^6.0.3",

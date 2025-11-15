@@ -1,5 +1,5 @@
 {
-  "name": "@histoire/vendors",
+  "name": "histoire-vendors",
   "type": "module",
   "version": "1.0.0-alpha.4",
   "description": "Bundled vendors for histoire",

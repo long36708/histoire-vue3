@@ -1,5 +1,5 @@
 <script lang="ts">
-import { Story } from '@histoire/shared'
+import { Story } from 'histoire-shared'
 import { afterUpdate, getContext } from 'svelte'
 
 export let source: string = null

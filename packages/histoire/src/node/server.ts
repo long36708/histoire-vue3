@@ -1,4 +1,4 @@
-import type { ServerStoryFile } from '@histoire/shared'
+import type { ServerStoryFile } from 'histoire-shared'
 import type { Context } from './context.js'
 import { performance } from 'node:perf_hooks'
 import pc from 'picocolors'

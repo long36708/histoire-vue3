@@ -757,7 +757,7 @@
 
 * add replaceAll guard ([319f9aa](https://github.com/Akryum/histoire/commit/319f9aadf77793f6e0271ded78246103e3d38f58))
 * dedupe addStory of same file ([9076776](https://github.com/Akryum/histoire/commit/90767765f027bbfcaf4539735139000386938667))
-* **nuxt:** don't optimize @histoire/plugin-nuxt ([07397ed](https://github.com/Akryum/histoire/commit/07397ed5ea8dddbe00c37bb074688a04206aa7e1))
+* **nuxt:** don't optimize histoire-plugin-nuxt ([07397ed](https://github.com/Akryum/histoire/commit/07397ed5ea8dddbe00c37bb074688a04206aa7e1))
 
 
 
@@ -1197,7 +1197,7 @@
 ### Bug Fixes
 
 * global setup token `,` error, fix [#244](https://github.com/Akryum/histoire/issues/244) ([ca080ad](https://github.com/Akryum/histoire/commit/ca080ad7b94083e94ac7496dcfaa0c1613421f41))
-* **types:** shim @histoire/app, fix [#226](https://github.com/Akryum/histoire/issues/226) ([6250b85](https://github.com/Akryum/histoire/commit/6250b853f53348b9fdf3db6d96ad6803e6647b74))
+* **types:** shim histoire-app, fix [#226](https://github.com/Akryum/histoire/issues/226) ([6250b85](https://github.com/Akryum/histoire/commit/6250b853f53348b9fdf3db6d96ad6803e6647b74))
 
 
 
@@ -1217,7 +1217,7 @@
 ### Bug Fixes
 
 * broken tailwind tokens ([626176a](https://github.com/Akryum/histoire/commit/626176afaf1cbf8657bddd105bee4dc26092de77))
-* exclude @histoire/vendors from optimize ([a9171d4](https://github.com/Akryum/histoire/commit/a9171d48aadc54b03ced2eb8988d274b56037cc0))
+* exclude histoire-vendors from optimize ([a9171d4](https://github.com/Akryum/histoire/commit/a9171d48aadc54b03ced2eb8988d274b56037cc0))
 
 
 
@@ -1287,7 +1287,7 @@
 
 ### Bug Fixes
 
-* allow require.resolve @histoire/controls ([2717442](https://github.com/Akryum/histoire/commit/27174425f86e19c294d8d39bca372016745a15db))
+* allow require.resolve histoire-controls ([2717442](https://github.com/Akryum/histoire/commit/27174425f86e19c294d8d39bca372016745a15db))
 * import of flexsearch, fix [#227](https://github.com/Akryum/histoire/issues/227) ([1b44bb6](https://github.com/Akryum/histoire/commit/1b44bb66b7086ea7e2625de8890624a6919b8a01))
 * **plugin:** initialize context before calling onDev ([ed0d5b8](https://github.com/Akryum/histoire/commit/ed0d5b8b60428f587d4f87749e4818424edb1327))
 * remove forced deps optimize ([234c8c1](https://github.com/Akryum/histoire/commit/234c8c1777e4b56e446c9f06ee22c9fae81fd267))
@@ -1337,7 +1337,7 @@
 
 ### Features
 
-* cleaner histoire package, moved client to `@histoire/app` ([0b788a3](https://github.com/Akryum/histoire/commit/0b788a323f59912283e2c735bb8139a814659e4d))
+* cleaner histoire package, moved client to `histoire-app` ([0b788a3](https://github.com/Akryum/histoire/commit/0b788a323f59912283e2c735bb8139a814659e4d))
 * support plugins ([3357c46](https://github.com/Akryum/histoire/commit/3357c46892466144e0d163b120ee4842822dbcb8))
 * Vue 2.7 support ([e54694a](https://github.com/Akryum/histoire/commit/e54694ae00b178bf046661252037baf1c9b8b05a))
 
@@ -1346,18 +1346,18 @@
 Install the vue3 plugin:
 
 ```shell
-pnpm i -D @histoire/plugin-vue
+pnpm i -D histoire-plugin-vue
 # OR
-npm i -D @histoire/plugin-vue
+npm i -D histoire-plugin-vue
 # OR
-yarn add -D @histoire/plugin-vue
+yarn add -D histoire-plugin-vue
 ```
 
 Create or update your histoire config file (`histoire.config.js` or `histoire.config.ts`):
 
 ```ts
-import { defineConfig } from 'histoire'
-import { HstVue } from '@histoire/plugin-vue' // New
+import { defineConfig } from 'longmo-histoire'
+import { HstVue } from 'histoire-plugin-vue' // New
 
 export default defineConfig({
   plugins: [
@@ -1368,8 +1368,8 @@ export default defineConfig({
 
 Update imports:
 
-- `import { defineSetupVue3 } from 'histoire'` => `import { defineSetupVue3 } from '@histoire/plugin-vue'`
-- `/// <reference types="histoire/vue" />` => `/// <reference types="@histoire/plugin-vue/components" />`
+- `import { defineSetupVue3 } from 'longmo-histoire'` => `import { defineSetupVue3 } from 'histoire-plugin-vue'`
+- `/// <reference types="histoire/vue" />` => `/// <reference types="histoire-plugin-vue/components" />`
 
 
 ## [0.8.4](https://github.com/Akryum/histoire/compare/v0.8.3...v0.8.4) (2022-07-22)

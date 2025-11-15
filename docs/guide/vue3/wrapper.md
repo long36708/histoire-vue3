@@ -5,7 +5,7 @@ A Wrapper allows you to render things around the displayed story/variant.
 In your [setup file](./app-setup.md), you can add wrapper components with `addWrapper`:
 
 ```ts
-import { defineSetupVue3 } from '@histoire/plugin-vue'
+import { defineSetupVue3 } from 'histoire-plugin-vue'
 import WrapperGlobal from './histoire/GlobalWrapper.vue'
 
 export const setupVue3 = defineSetupVue3(({ addWrapper }) => {
@@ -19,7 +19,7 @@ Here is an example for a wrapper component:
 
 ```vue
 <script lang="ts" setup>
-import { Story, Variant } from 'histoire'
+import { Story, Variant } from 'longmo-histoire'
 
 const props = defineProps<{
   story: Story

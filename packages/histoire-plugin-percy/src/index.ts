@@ -1,4 +1,4 @@
-import type { Plugin } from 'histoire'
+import type { Plugin } from 'longmo-histoire'
 import type { Page, WaitForOptions } from 'puppeteer'
 import { createRequire } from 'node:module'
 import { fileURLToPath } from 'node:url'
@@ -95,7 +95,7 @@ function resolveOptions<T extends object | number>(
 export function HstPercy(options: PercyPluginOptions = {}): Plugin {
   const finalOptions: PercyPluginOptions = defu(options, defaultOptions)
   return {
-    name: '@histoire/plugin-percy',
+    name: 'histoire-plugin-percy',
 
     onBuild: async (api) => {
       if (!(await isPercyEnabled())) {

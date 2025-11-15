@@ -6,7 +6,7 @@ import type {
   Variant,
   StoryMeta,
   VariantMeta,
-} from '@histoire/shared'
+} from 'histoire-shared'
 import type {
   HstButton,
   HstButtonGroup,
@@ -24,7 +24,7 @@ import type {
   HstTokenGrid,
   HstCopyIcon,
   HstColorSelect,
-} from '@histoire/controls'
+} from 'histoire-controls'
 
 // Utils
 
@@ -89,7 +89,7 @@ interface VueStoryProps {
    * You can type it with:
    *
    * ```ts
-   * declare module 'histoire' {
+   * declare module 'longmo-histoire' {
    *    // For both Story and Variant
    *    interface CommonMeta {
    *     myMeta: string
@@ -171,7 +171,7 @@ interface VueVariantProps {
    * You can type it with:
    *
    * ```ts
-   * declare module 'histoire' {
+   * declare module 'longmo-histoire' {
    *    // For both Story and Variant
    *    interface CommonMeta {
    *     myMeta: string

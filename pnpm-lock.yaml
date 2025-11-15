@@ -35,9 +35,6 @@ importers:
       '@antfu/eslint-config':
         specifier: ^3.11.2
         version: 3.16.0(@typescript-eslint/utils@8.24.1(eslint@9.20.1(jiti@2.4.2))(typescript@5.6.3))(@vue/compiler-sfc@3.5.13)(eslint@9.20.1(jiti@2.4.2))(typescript@5.6.3)(vitest@0.34.6(jsdom@25.0.1)(sass@1.85.0)(terser@5.39.0))
-      '@histoire/vendors':
-        specifier: workspace:*
-        version: link:packages/histoire-vendors
       '@iconify/vue':
         specifier: ^4.1.2
         version: 4.3.0(vue@3.5.13(typescript@5.6.3))
@@ -56,6 +53,9 @@ importers:
       floating-vue:
         specifier: 5.2.2
         version: 5.2.2(@nuxt/kit@3.15.4(magicast@0.3.5))(vue@3.5.13(typescript@5.6.3))
+      histoire-vendors:
+        specifier: workspace:*
+        version: link:packages/histoire-vendors
       postcss:
         specifier: 'catalog:'
         version: 8.5.6
@@ -83,19 +83,19 @@ importers:
 
   examples/nuxt3:
     devDependencies:
-      '@histoire/plugin-nuxt':
-        specifier: workspace:*
-        version: link:../../packages/histoire-plugin-nuxt
-      '@histoire/plugin-vue':
-        specifier: workspace:*
-        version: link:../../packages/histoire-plugin-vue
       '@nuxtjs/tailwindcss':
         specifier: ^6.12.2
         version: 6.13.1(magicast@0.3.5)
       cypress:
         specifier: ^13.16.1
         version: 13.17.0
-      histoire:
+      histoire-plugin-nuxt:
+        specifier: workspace:*
+        version: link:../../packages/histoire-plugin-nuxt
+      histoire-plugin-vue:
+        specifier: workspace:*
+        version: link:../../packages/histoire-plugin-vue
+      longmo-histoire:
         specifier: workspace:*
         version: link:../../packages/histoire
       nuxt:
@@ -114,16 +114,16 @@ importers:
         specifier: ^4.2.7
         version: 4.2.19
     devDependencies:
-      '@histoire/plugin-svelte':
-        specifier: workspace:*
-        version: link:../../packages/histoire-plugin-svelte
       '@sveltejs/vite-plugin-svelte':
         specifier: ^3.0.2
         version: 3.1.2(svelte@4.2.19)(vite@5.4.14(@types/node@22.13.4)(sass@1.85.0)(terser@5.39.0))
       cypress:
         specifier: ^13.16.1
         version: 13.17.0
-      histoire:
+      histoire-plugin-svelte:
+        specifier: workspace:*
+        version: link:../../packages/histoire-plugin-svelte
+      longmo-histoire:
         specifier: workspace:*
         version: link:../../packages/histoire
       start-server-and-test:
@@ -145,9 +145,6 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2
     devDependencies:
-      '@histoire/plugin-svelte':
-        specifier: workspace:*
-        version: link:../../packages/histoire-plugin-svelte
       '@sveltejs/adapter-auto':
         specifier: ^3.3.1
         version: 3.3.1(@sveltejs/kit@2.17.2(@sveltejs/vite-plugin-svelte@3.1.2(svelte@5.20.2)(vite@7.0.0(@types/node@22.13.4)(jiti@2.4.2)(sass@1.85.0)(terser@5.39.0)(yaml@2.7.0)))(svelte@5.20.2)(vite@7.0.0(@types/node@22.13.4)(jiti@2.4.2)(sass@1.85.0)(terser@5.39.0)(yaml@2.7.0)))
@@ -157,7 +154,10 @@ importers:
       '@types/cookie':
         specifier: ^1.0.0
         version: 1.0.0
-      histoire:
+      histoire-plugin-svelte:
+        specifier: workspace:*
+        version: link:../../packages/histoire-plugin-svelte
+      longmo-histoire:
         specifier: workspace:*
         version: link:../../packages/histoire
       svelte:
@@ -191,15 +191,6 @@ importers:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.6.3)
     devDependencies:
-      '@histoire/app':
-        specifier: workspace:*
-        version: link:../../packages/histoire-app
-      '@histoire/plugin-vue':
-        specifier: workspace:*
-        version: link:../../packages/histoire-plugin-vue
-      '@histoire/vendors':
-        specifier: workspace:*
-        version: link:../../packages/histoire-vendors
       '@vitejs/plugin-vue':
         specifier: ^5.2.1
         version: 5.2.1(vite@7.0.0(@types/node@22.13.4)(jiti@2.4.2)(sass@1.85.0)(terser@5.39.0)(yaml@2.7.0))(vue@3.5.13(typescript@5.6.3))
@@ -209,7 +200,16 @@ importers:
       globby:
         specifier: ^14.0.2
         version: 14.1.0
-      histoire:
+      histoire-app:
+        specifier: workspace:*
+        version: link:../../packages/histoire-app
+      histoire-plugin-vue:
+        specifier: workspace:*
+        version: link:../../packages/histoire-plugin-vue
+      histoire-vendors:
+        specifier: workspace:*
+        version: link:../../packages/histoire-vendors
+      longmo-histoire:
         specifier: workspace:*
         version: link:../../packages/histoire
       minimatch:
@@ -234,16 +234,16 @@ importers:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.6.3)
     devDependencies:
-      '@histoire/plugin-percy':
-        specifier: workspace:*
-        version: link:../../packages/histoire-plugin-percy
-      '@histoire/plugin-vue':
-        specifier: workspace:*
-        version: link:../../packages/histoire-plugin-vue
       '@vitejs/plugin-vue':
         specifier: ^5.2.1
         version: 5.2.1(vite@7.0.0(@types/node@22.13.4)(jiti@2.4.2)(sass@1.85.0)(terser@5.39.0)(yaml@2.7.0))(vue@3.5.13(typescript@5.6.3))
-      histoire:
+      histoire-plugin-percy:
+        specifier: workspace:*
+        version: link:../../packages/histoire-plugin-percy
+      histoire-plugin-vue:
+        specifier: workspace:*
+        version: link:../../packages/histoire-plugin-vue
+      longmo-histoire:
         specifier: workspace:*
         version: link:../../packages/histoire
       vite:
@@ -256,16 +256,16 @@ importers:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.6.3)
     devDependencies:
-      '@histoire/plugin-screenshot':
-        specifier: workspace:*
-        version: link:../../packages/histoire-plugin-screenshot
-      '@histoire/plugin-vue':
-        specifier: workspace:*
-        version: link:../../packages/histoire-plugin-vue
       '@vitejs/plugin-vue':
         specifier: ^5.2.1
         version: 5.2.1(vite@7.0.0(@types/node@22.13.4)(jiti@2.4.2)(sass@1.85.0)(terser@5.39.0)(yaml@2.7.0))(vue@3.5.13(typescript@5.6.3))
-      histoire:
+      histoire-plugin-screenshot:
+        specifier: workspace:*
+        version: link:../../packages/histoire-plugin-screenshot
+      histoire-plugin-vue:
+        specifier: workspace:*
+        version: link:../../packages/histoire-plugin-vue
+      longmo-histoire:
         specifier: workspace:*
         version: link:../../packages/histoire
       vite:
@@ -278,13 +278,13 @@ importers:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.6.3)
     devDependencies:
-      '@histoire/plugin-vue':
-        specifier: workspace:*
-        version: link:../../packages/histoire-plugin-vue
       '@vitejs/plugin-vue':
         specifier: ^5.2.1
         version: 5.2.1(vite@7.0.0(@types/node@22.13.4)(jiti@2.4.2)(sass@1.85.0)(terser@5.39.0)(yaml@2.7.0))(vue@3.5.13(typescript@5.6.3))
-      histoire:
+      histoire-plugin-vue:
+        specifier: workspace:*
+        version: link:../../packages/histoire-plugin-vue
+      longmo-histoire:
         specifier: workspace:*
         version: link:../../packages/histoire
       vite:
@@ -303,13 +303,13 @@ importers:
         specifier: ^3.7.5
         version: 3.7.13(typescript@5.6.3)(vite-plugin-vuetify@2.0.4)(vue@3.5.13(typescript@5.6.3))
     devDependencies:
-      '@histoire/plugin-vue':
-        specifier: workspace:*
-        version: link:../../packages/histoire-plugin-vue
       '@vitejs/plugin-vue':
         specifier: ^5.2.1
         version: 5.2.1(vite@7.0.0(@types/node@22.13.4)(jiti@2.4.2)(sass@1.85.0)(terser@5.39.0)(yaml@2.7.0))(vue@3.5.13(typescript@5.6.3))
-      histoire:
+      histoire-plugin-vue:
+        specifier: workspace:*
+        version: link:../../packages/histoire-plugin-vue
+      longmo-histoire:
         specifier: workspace:*
         version: link:../../packages/histoire
       vite:
@@ -324,18 +324,6 @@ importers:
       '@akryum/tinypool':
         specifier: ^0.3.1
         version: 0.3.1
-      '@histoire/app':
-        specifier: workspace:^
-        version: link:../histoire-app
-      '@histoire/controls':
-        specifier: workspace:^
-        version: link:../histoire-controls
-      '@histoire/shared':
-        specifier: workspace:^
-        version: link:../histoire-shared
-      '@histoire/vendors':
-        specifier: workspace:^
-        version: link:../histoire-vendors
       '@types/markdown-it':
         specifier: ^14.1.2
         version: 14.1.2
@@ -366,6 +354,18 @@ importers:
       gray-matter:
         specifier: ^4.0.3
         version: 4.0.3
+      histoire-app:
+        specifier: workspace:^
+        version: link:../histoire-app
+      histoire-controls:
+        specifier: workspace:^
+        version: link:../histoire-controls
+      histoire-shared:
+        specifier: workspace:^
+        version: link:../histoire-shared
+      histoire-vendors:
+        specifier: workspace:^
+        version: link:../histoire-vendors
       jiti:
         specifier: ^2.4.1
         version: 2.4.2
@@ -433,18 +433,18 @@ importers:
 
   packages/histoire-app:
     dependencies:
-      '@histoire/controls':
-        specifier: workspace:^
-        version: link:../histoire-controls
-      '@histoire/shared':
-        specifier: workspace:^
-        version: link:../histoire-shared
-      '@histoire/vendors':
-        specifier: workspace:^
-        version: link:../histoire-vendors
       fuse.js:
         specifier: ^7.0.0
         version: 7.1.0
+      histoire-controls:
+        specifier: workspace:^
+        version: link:../histoire-controls
+      histoire-shared:
+        specifier: workspace:^
+        version: link:../histoire-shared
+      histoire-vendors:
+        specifier: workspace:^
+        version: link:../histoire-vendors
       shiki:
         specifier: ^3.0.0
         version: 3.0.0
@@ -521,10 +521,10 @@ importers:
       '@codemirror/view':
         specifier: ^6.35.0
         version: 6.36.3
-      '@histoire/shared':
+      histoire-shared:
         specifier: workspace:^
         version: link:../histoire-shared
-      '@histoire/vendors':
+      histoire-vendors:
         specifier: workspace:^
         version: link:../histoire-vendors
     devDependencies:
@@ -582,20 +582,20 @@ importers:
 
   packages/histoire-controls-stories:
     dependencies:
-      '@histoire/controls':
+      histoire-controls:
         specifier: workspace:*
         version: link:../histoire-controls
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.6.3)
     devDependencies:
-      '@histoire/plugin-vue':
-        specifier: workspace:*
-        version: link:../histoire-plugin-vue
       '@vitejs/plugin-vue':
         specifier: ^5.2.1
         version: 5.2.1(vite@7.0.0(@types/node@22.13.4)(jiti@2.4.2)(sass@1.85.0)(terser@5.39.0)(yaml@2.7.0))(vue@3.5.13(typescript@5.6.3))
-      histoire:
+      histoire-plugin-vue:
+        specifier: workspace:*
+        version: link:../histoire-plugin-vue
+      longmo-histoire:
         specifier: workspace:*
         version: link:../histoire
       vite:
@@ -604,9 +604,6 @@ importers:
 
   packages/histoire-plugin-nuxt:
     dependencies:
-      '@histoire/plugin-vue':
-        specifier: workspace:^
-        version: link:../histoire-plugin-vue
       '@nuxt/kit':
         specifier: ^3.14.1592
         version: 3.15.4(magicast@0.3.5)
@@ -616,6 +613,9 @@ importers:
       h3:
         specifier: ^1.13.0
         version: 1.15.0
+      histoire-plugin-vue:
+        specifier: workspace:^
+        version: link:../histoire-plugin-vue
       nuxt:
         specifier: ^3.0.0-rc.11
         version: 3.15.4(@parcel/watcher@2.5.1)(@types/node@22.13.4)(db0@0.2.4)(eslint@9.20.1(jiti@2.4.2))(ioredis@5.5.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.44.1)(sass@1.85.0)(terser@5.39.0)(typescript@5.6.3)(vite@7.0.0(@types/node@22.13.4)(jiti@2.4.2)(sass@1.85.0)(terser@5.39.0)(yaml@2.7.0))(yaml@2.7.0)
@@ -632,7 +632,7 @@ importers:
       '@types/node':
         specifier: ^22.10.1
         version: 22.13.4
-      histoire:
+      longmo-histoire:
         specifier: workspace:*
         version: link:../histoire
       typescript:
@@ -663,7 +663,7 @@ importers:
       '@types/node':
         specifier: ^22.10.1
         version: 22.13.4
-      histoire:
+      longmo-histoire:
         specifier: workspace:*
         version: link:../histoire
       typescript:
@@ -688,7 +688,7 @@ importers:
       '@types/node':
         specifier: ^22.10.1
         version: 22.13.4
-      histoire:
+      longmo-histoire:
         specifier: workspace:*
         version: link:../histoire
       typescript:
@@ -697,21 +697,21 @@ importers:
 
   packages/histoire-plugin-svelte:
     dependencies:
-      '@histoire/controls':
-        specifier: workspace:^
-        version: link:../histoire-controls
-      '@histoire/shared':
-        specifier: workspace:^
-        version: link:../histoire-shared
-      '@histoire/vendors':
-        specifier: workspace:^
-        version: link:../histoire-vendors
       change-case:
         specifier: ^5.4.4
         version: 5.4.4
       globby:
         specifier: ^14.0.2
         version: 14.1.0
+      histoire-controls:
+        specifier: workspace:^
+        version: link:../histoire-controls
+      histoire-shared:
+        specifier: workspace:^
+        version: link:../histoire-shared
+      histoire-vendors:
+        specifier: workspace:^
+        version: link:../histoire-vendors
       launch-editor:
         specifier: ^2.9.1
         version: 2.10.0
@@ -731,7 +731,7 @@ importers:
       fs-extra:
         specifier: ^11.2.0
         version: 11.3.0
-      histoire:
+      longmo-histoire:
         specifier: workspace:*
         version: link:../histoire
       svelte:
@@ -749,21 +749,21 @@ importers:
 
   packages/histoire-plugin-vue:
     dependencies:
-      '@histoire/controls':
-        specifier: workspace:^
-        version: link:../histoire-controls
-      '@histoire/shared':
-        specifier: workspace:^
-        version: link:../histoire-shared
-      '@histoire/vendors':
-        specifier: workspace:^
-        version: link:../histoire-vendors
       change-case:
         specifier: ^5.4.4
         version: 5.4.4
       globby:
         specifier: ^14.0.2
         version: 14.1.0
+      histoire-controls:
+        specifier: workspace:^
+        version: link:../histoire-controls
+      histoire-shared:
+        specifier: workspace:^
+        version: link:../histoire-shared
+      histoire-vendors:
+        specifier: workspace:^
+        version: link:../histoire-vendors
       launch-editor:
         specifier: ^2.9.1
         version: 2.10.0
@@ -777,7 +777,7 @@ importers:
       concurrently:
         specifier: ^9.1.0
         version: 9.1.2
-      histoire:
+      longmo-histoire:
         specifier: workspace:*
         version: link:../histoire
       typescript:
@@ -792,9 +792,6 @@ importers:
 
   packages/histoire-shared:
     dependencies:
-      '@histoire/vendors':
-        specifier: workspace:^
-        version: link:../histoire-vendors
       '@types/fs-extra':
         specifier: ^11.0.4
         version: 11.0.4
@@ -804,6 +801,9 @@ importers:
       chokidar:
         specifier: ^4.0.1
         version: 4.0.3
+      histoire-vendors:
+        specifier: workspace:^
+        version: link:../histoire-vendors
       pathe:
         specifier: ^1.1.2
         version: 1.1.2

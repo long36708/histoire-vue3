@@ -1,5 +1,5 @@
 <script lang="ts">
-import { Story, omitInheritStoryProps } from '@histoire/shared'
+import { Story, omitInheritStoryProps } from 'histoire-shared'
 import { getContext, setContext } from 'svelte'
 import MountVariant from './MountVariant.svelte'
 

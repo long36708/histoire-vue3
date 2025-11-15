@@ -1,5 +1,5 @@
 {
-  "name": "@histoire/app",
+  "name": "histoire-app",
   "type": "module",
   "version": "1.0.0-alpha.4",
   "description": "Pre-bundled UI for Histoire",
@@ -29,9 +29,9 @@
     "watch": "concurrently \"vite build --watch\" \"pnpm run build:css --watch\" \"node ./scripts/watchAndCopy.mjs\""
   },
   "dependencies": {
-    "@histoire/controls": "workspace:^",
-    "@histoire/shared": "workspace:^",
-    "@histoire/vendors": "workspace:^",
+    "histoire-controls": "workspace:^",
+    "histoire-shared": "workspace:^",
+    "histoire-vendors": "workspace:^",
     "fuse.js": "^7.0.0",
     "shiki": "^3.0.0"
   },

@@ -1,10 +1,10 @@
-import type { Plugin } from 'histoire'
+import type { Plugin } from 'longmo-histoire'
 import generateStoryCommand from './commands/generate-story.server.js'
 import { listComponentFiles } from './util/list-components.js'
 
 export function HstVue(): Plugin {
   return {
-    name: '@histoire/plugin-vue',
+    name: 'histoire-plugin-vue',
 
     defaultConfig() {
       return {
@@ -39,7 +39,7 @@ export function HstVue(): Plugin {
 
     supportPlugin: {
       id: 'vue3',
-      moduleName: '@histoire/plugin-vue',
+      moduleName: 'histoire-plugin-vue',
       setupFn: 'setupVue3',
       importStoriesPrepend: `import { defineAsyncComponent as defineAsyncComponentVue3 } from 'vue'`,
       importStoryComponent: (file, index) => `const Comp${index} = defineAsyncComponentVue3(() => import(${JSON.stringify(file.moduleId)}))`,

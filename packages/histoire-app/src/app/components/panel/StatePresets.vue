@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { Story, Variant } from '../../types'
-import { applyState, clone, omit } from '@histoire/shared'
+import { applyState, clone, omit } from 'histoire-shared'
 import { Icon } from '@iconify/vue'
 import { onClickOutside, useStorage, useTimeoutFn } from '@vueuse/core'
 import { computed, nextTick, onMounted, ref } from 'vue'

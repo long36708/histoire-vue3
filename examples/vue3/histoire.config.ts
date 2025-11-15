@@ -1,5 +1,5 @@
-import { HstVue } from '@histoire/plugin-vue'
-import { defineConfig, getDefaultConfig } from 'histoire'
+import { HstVue } from 'histoire-plugin-vue'
+import { defineConfig, getDefaultConfig } from 'longmo-histoire'
 
 export default defineConfig({
   // outDir: 'hdist',

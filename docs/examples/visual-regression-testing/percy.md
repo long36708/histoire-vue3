@@ -3,14 +3,14 @@
 You need the [Percy CLI](https://docs.percy.io/docs/cli-overview) installed to be able to send snapshots to Percy.
 
 ```bash
-pnpm add -D @histoire/plugin-percy
+pnpm add -D histoire-plugin-percy
 ```
 
 Add the plugin in histoire config:
 
 ```js
-import { HstPercy } from '@histoire/plugin-percy'
-import { defineConfig } from 'histoire'
+import { HstPercy } from 'histoire-plugin-percy'
+import { defineConfig } from 'longmo-histoire'
 
 export default defineConfig({
   plugins: [

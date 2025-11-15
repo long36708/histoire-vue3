@@ -1,4 +1,4 @@
-import type { ServerStoryFile } from '@histoire/shared'
+import type { ServerStoryFile } from 'histoire-shared'
 import type { ViteDevServer } from 'vite'
 import type { FetchFunction, ResolveIdFunction } from 'vite-node'
 import type { Context } from '../context.js'

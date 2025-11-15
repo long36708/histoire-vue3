@@ -1,4 +1,4 @@
-/// <reference types="histoire" />
+/// <reference types="longmo-histoire" />
 
 import path from 'node:path'
 import vue from '@vitejs/plugin-vue'

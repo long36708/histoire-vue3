@@ -1,15 +1,15 @@
 import type {
   App as _App,
-} from '@histoire/vendors/vue'
+} from 'histoire-vendors/vue'
 import type {
   App,
 } from 'vue'
-import { components } from '@histoire/controls'
+import { components } from 'histoire-controls'
 import {
   createApp as _createApp,
   h as _h,
   reactive as _reactive,
-} from '@histoire/vendors/vue'
+} from 'histoire-vendors/vue'
 import {
   defineComponent,
   h,

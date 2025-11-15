@@ -1,5 +1,5 @@
 import { mountMainApp } from './bundled/index.js'
 import './style.css'
-import './bundled/app.css'
+import './bundled/histoire-app.css'
 
 mountMainApp()

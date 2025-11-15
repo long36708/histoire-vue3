@@ -1,5 +1,5 @@
 {
-  "name": "@histoire/plugin-nuxt",
+  "name": "histoire-plugin-nuxt",
   "type": "module",
   "version": "1.0.0-alpha.4",
   "description": "Histoire plugin to integrate with Nuxt 3",
@@ -27,8 +27,8 @@
     "watch": "tsc -d -w --sourceMap"
   },
   "peerDependencies": {
-    "@histoire/plugin-vue": "workspace:^",
-    "histoire": "workspace:^",
+    "histoire-plugin-vue": "workspace:^",
+    "longmo-histoire": "workspace:^",
     "nuxt": "^3.0.0-rc.11"
   },
   "dependencies": {
@@ -41,7 +41,7 @@
   "devDependencies": {
     "@nuxt/schema": "^3.14.1592",
     "@types/node": "^22.10.1",
-    "histoire": "workspace:*",
+    "longmo-histoire": "workspace:*",
     "typescript": "catalog:",
     "vite": "catalog:"
   }

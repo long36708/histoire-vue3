@@ -1,4 +1,4 @@
-import type { Story, Variant } from '@histoire/shared'
+import type { Story, Variant } from 'histoire-shared'
 import type { App, Component } from 'vue'
 
 export interface Vue3StorySetupApi {

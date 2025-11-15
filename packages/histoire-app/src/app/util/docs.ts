@@ -1,5 +1,5 @@
 import type { Story, Variant } from '../types'
-import { unindent } from '@histoire/shared'
+import { unindent } from 'histoire-shared'
 import { clientSupportPlugins } from 'virtual:$histoire-support-plugins-client'
 
 export async function getSourceCode(story: Story, variant: Variant) {

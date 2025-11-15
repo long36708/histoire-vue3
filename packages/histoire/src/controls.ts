@@ -1,1 +1,1 @@
-export * from '@histoire/controls'
+export * from 'histoire-controls'

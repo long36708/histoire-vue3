@@ -1,4 +1,4 @@
-import type { ClientCommand } from '@histoire/shared'
+import type { ClientCommand } from 'histoire-shared'
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import { executeCommand, getCommandContext } from '../util/commands.js'

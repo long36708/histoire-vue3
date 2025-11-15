@@ -1,5 +1,5 @@
 import type { StoryFile } from './types'
-import { applyState } from '@histoire/shared'
+import { applyState } from 'histoire-shared'
 import { createPinia } from 'pinia'
 import { files } from 'virtual:$histoire-stories'
 import { computed, createApp, h, onMounted, ref, watch } from 'vue'

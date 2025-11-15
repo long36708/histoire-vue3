@@ -39,12 +39,12 @@ Create a new npm package. Example `package.json`:
     "defu": "^6.0.0"
   },
   "devDependencies": {
-    "histoire": "latest",
+    "longmo-histoire": "latest",
     "rimraf": "^3.0.0",
     "typescript": "^5.4.4"
   },
   "peerDependencies": {
-    "histoire": "latest"
+    "longmo-histoire": "latest"
   }
 }
 ```
@@ -96,7 +96,7 @@ Example `tsconfig.json`:
 Create a new `src/index.ts` file:
 
 ```ts
-import type { Plugin } from 'histoire'
+import type { Plugin } from 'longmo-histoire'
 import { defu } from 'defu'
 
 export interface MyPluginOptions {
@@ -122,7 +122,7 @@ Usage of your plugin:
 ```js
 // In your histoire config
 
-import { defineConfig } from 'histoire'
+import { defineConfig } from 'longmo-histoire'
 import { MyHistoirePlugin } from 'my-histoire-plugin'
 
 export default defineConfig({

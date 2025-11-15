@@ -3,7 +3,7 @@ import type {
   HistoireConfig,
   Plugin,
   SupportMatchPattern,
-} from '@histoire/shared'
+} from 'histoire-shared'
 import type { Context } from './context.js'
 import fs from 'node:fs'
 import { fileURLToPath } from 'node:url'

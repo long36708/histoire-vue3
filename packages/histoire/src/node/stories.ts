@@ -1,4 +1,4 @@
-import type { ServerStoryFile } from '@histoire/shared'
+import type { ServerStoryFile } from 'histoire-shared'
 import type { Context } from './context.js'
 import { kebabCase } from 'change-case'
 import chokidar from 'chokidar'

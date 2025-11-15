@@ -1,1 +1,1 @@
-export * from '@histoire/vendors/vue'
+export * from 'histoire-vendors/vue'

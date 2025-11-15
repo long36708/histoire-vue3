@@ -1,4 +1,4 @@
-import type { ServerRunPayload } from '@histoire/shared'
+import type { ServerRunPayload } from 'histoire-shared'
 // @ts-expect-error virtual module
 import { collectSupportPlugins } from 'virtual:$histoire-support-plugins-collect'
 

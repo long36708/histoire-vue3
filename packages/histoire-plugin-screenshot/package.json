@@ -1,5 +1,5 @@
 {
-  "name": "@histoire/plugin-screenshot",
+  "name": "histoire-plugin-screenshot",
   "type": "module",
   "version": "1.0.0-alpha.4",
   "description": "Histoire plugin to take screenshots for visual regression testing",
@@ -27,7 +27,7 @@
     "watch": "tsc -d -w --sourceMap"
   },
   "peerDependencies": {
-    "histoire": "workspace:^"
+    "longmo-histoire": "workspace:^"
   },
   "dependencies": {
     "capture-website": "^4.2.0",
@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.10.1",
-    "histoire": "workspace:*",
+    "longmo-histoire": "workspace:*",
     "typescript": "catalog:"
   }
 }

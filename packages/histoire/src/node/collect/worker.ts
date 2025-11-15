@@ -1,4 +1,4 @@
-import type { ServerRunPayload, ServerStory, ServerStoryFile } from '@histoire/shared'
+import type { ServerRunPayload, ServerStory, ServerStoryFile } from 'histoire-shared'
 import type { MessagePort } from 'node:worker_threads'
 import type { FetchFunction, ResolveIdFunction } from 'vite-node'
 import { performance } from 'node:perf_hooks'

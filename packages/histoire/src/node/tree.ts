@@ -4,7 +4,7 @@ import type {
   ServerTree,
   ServerTreeFile,
   TreeGroupConfig,
-} from '@histoire/shared'
+} from 'histoire-shared'
 import pc from 'picocolors'
 
 export function createPath(config: HistoireConfig, file: ServerTreeFile) {

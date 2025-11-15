@@ -1,4 +1,4 @@
-import type { ClientCommandOptions } from 'histoire'
+import type { ClientCommandOptions } from 'longmo-histoire'
 import { kebabCase } from 'change-case'
 import { openStory, sendEvent } from 'histoire/plugin'
 

@@ -1,5 +1,5 @@
 import vue from '@vitejs/plugin-vue'
-import { defaultColors } from 'histoire'
+import { defaultColors } from 'longmo-histoire'
 import { defineConfig } from 'vite'
 
 export default defineConfig({

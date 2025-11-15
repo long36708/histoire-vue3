@@ -1,4 +1,4 @@
-import type { PluginCommand } from 'histoire'
+import type { PluginCommand } from 'longmo-histoire'
 import fs from 'node:fs'
 import launchEditor from 'launch-editor'
 import path from 'pathe'
@@ -19,7 +19,7 @@ export default {
 
     const content = `<script${isTs ? ' lang="ts"' : ''}>
   ${isTs
-    ? `import type { Hst } from '@histoire/plugin-svelte'\n  
+    ? `import type { Hst } from 'histoire-plugin-svelte'\n  
   `
     : ''}import ${componentName} from './${component}'
 
@@ -41,7 +41,7 @@ export default {
 
     launchEditor(targetFile)
   },
-  clientSetupFile: '@histoire/plugin-svelte/dist/commands/generate-story.client.js',
+  clientSetupFile: 'histoire-plugin-svelte/dist/commands/generate-story.client.js',
 } as PluginCommand
 
 async function isComponentTs(component: string) {

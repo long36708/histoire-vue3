@@ -1,11 +1,11 @@
-import type { Plugin } from 'histoire'
-import { defaultColors } from 'histoire'
+import type { Plugin } from 'longmo-histoire'
+import { defaultColors } from 'longmo-histoire'
 import generateStoryCommand from './commands/generate-story.server.js'
 import { listComponentFiles } from './util/list-components.js'
 
 export function HstSvelte(): Plugin {
   return {
-    name: '@histoire/plugin-svelte',
+    name: 'histoire-plugin-svelte',
 
     defaultConfig() {
       return {
@@ -21,9 +21,9 @@ export function HstSvelte(): Plugin {
             primary: defaultColors.orange,
           },
           logo: {
-            square: '@histoire/plugin-svelte/assets/histoire-svelte.svg',
-            light: '@histoire/plugin-svelte/assets/histoire-svelte-text.svg',
-            dark: '@histoire/plugin-svelte/assets/histoire-svelte-text.svg',
+            square: 'histoire-plugin-svelte/assets/histoire-svelte.svg',
+            light: 'histoire-plugin-svelte/assets/histoire-svelte-text.svg',
+            dark: 'histoire-plugin-svelte/assets/histoire-svelte-text.svg',
           },
         },
         viteIgnorePlugins: [
@@ -34,7 +34,7 @@ export function HstSvelte(): Plugin {
 
     supportPlugin: {
       id: 'svelte4',
-      moduleName: '@histoire/plugin-svelte',
+      moduleName: 'histoire-plugin-svelte',
       setupFn: ['setupSvelte3', 'setupSvelte4'],
       importStoryComponent: (file, index) => `import Comp${index} from ${JSON.stringify(file.moduleId)}`,
     },

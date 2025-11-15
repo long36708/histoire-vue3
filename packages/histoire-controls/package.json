@@ -1,5 +1,5 @@
 {
-  "name": "@histoire/controls",
+  "name": "histoire-controls",
   "type": "module",
   "version": "1.0.0-alpha.4",
   "description": "Prebuilt controls components",
@@ -47,8 +47,8 @@
     "@codemirror/state": "^6.4.1",
     "@codemirror/theme-one-dark": "^6.1.2",
     "@codemirror/view": "^6.35.0",
-    "@histoire/shared": "workspace:^",
-    "@histoire/vendors": "workspace:^"
+    "histoire-shared": "workspace:^",
+    "histoire-vendors": "workspace:^"
   },
   "devDependencies": {
     "@types/node": "^22.10.1",

@@ -1,5 +1,5 @@
 import type { Nuxt } from '@nuxt/schema'
-import type { Plugin } from 'histoire'
+import type { Plugin } from 'longmo-histoire'
 import type { UserConfig as ViteConfig } from 'vite'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -17,7 +17,7 @@ const ignorePlugins = [
 export function HstNuxt(): Plugin {
   let nuxt: Nuxt
   return {
-    name: '@histoire/plugin-nuxt',
+    name: 'histoire-plugin-nuxt',
 
     async defaultConfig() {
       const nuxtViteConfig = await useNuxtViteConfig()
@@ -63,7 +63,7 @@ export function HstNuxt(): Plugin {
             ...viteConfig.optimizeDeps,
             exclude: [
               ...viteConfig.optimizeDeps.exclude,
-              '@histoire/plugin-nuxt',
+              'histoire-plugin-nuxt',
             ],
           },
           // @ts-expect-error Vue-specific config
@@ -72,7 +72,7 @@ export function HstNuxt(): Plugin {
         },
         setupCode: [
           `${nuxt.options.css.map(file => `import '${file}'`).join('\n')}`,
-          `import { setupNuxtApp } from '@histoire/plugin-nuxt/dist/runtime/app-setup.js'
+          `import { setupNuxtApp } from 'histoire-plugin-nuxt/dist/runtime/app-setup.js'
 export async function setupVue3 () {
   await setupNuxtApp(${JSON.stringify(nuxt.options.runtimeConfig.public)})
 }`,

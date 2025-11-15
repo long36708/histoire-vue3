@@ -46,11 +46,11 @@ For example, you will usually import and use a component in your story:
 
 ## TypeScript
 
-To get typings for the `Hst` prop, you can import the `Hst` type from `@histoire/plugin-svelte`:
+To get typings for the `Hst` prop, you can import the `Hst` type from `histoire-plugin-svelte`:
 
 ```svelte
 <script lang="ts">
-  import type { Hst } from '@histoire/plugin-svelte'
+  import type { Hst } from 'histoire-plugin-svelte'
   export let Hst: Hst
 </script>
 

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { TextPrompt } from '@histoire/shared'
+import type { TextPrompt } from 'histoire-shared'
 import { computed, ref, watch } from 'vue'
 
 const props = defineProps<{

@@ -1,4 +1,4 @@
-import type { ServerStory } from '@histoire/shared'
+import type { ServerStory } from 'histoire-shared'
 import type { Context } from './context.js'
 
 interface SerializedStory extends Omit<ServerStory, 'docsText'> {

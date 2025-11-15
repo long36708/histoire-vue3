@@ -1,5 +1,5 @@
 {
-  "name": "@histoire/controls-stories",
+  "name": "histoire-controls-stories",
   "type": "module",
   "version": "0.8.4",
   "private": true,
@@ -19,13 +19,13 @@
     "story:preview": "histoire preview"
   },
   "dependencies": {
-    "@histoire/controls": "workspace:*",
+    "histoire-controls": "workspace:*",
     "vue": "^3.5.13"
   },
   "devDependencies": {
-    "@histoire/plugin-vue": "workspace:*",
+    "histoire-plugin-vue": "workspace:*",
     "@vitejs/plugin-vue": "^5.2.1",
-    "histoire": "workspace:*",
+    "longmo-histoire": "workspace:*",
     "vite": "catalog:"
   }
 }

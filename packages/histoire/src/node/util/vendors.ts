@@ -7,8 +7,8 @@ export const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // https://github.com/vitejs/vite/issues/9661
 const alias = {
-  '@histoire/vendors/vue': path.resolve(__dirname, '../vendors/vue.js'),
-  '@histoire/controls': path.resolve(__dirname, '../vendors/controls.js'),
+  'histoire-vendors/vue': path.resolve(__dirname, '../vendors/vue.js'),
+  'histoire-controls': path.resolve(__dirname, '../vendors/controls.js'),
 }
 
 export function getInjectedImport(request: string) {

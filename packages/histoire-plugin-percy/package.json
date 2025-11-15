@@ -1,5 +1,5 @@
 {
-  "name": "@histoire/plugin-percy",
+  "name": "histoire-plugin-percy",
   "type": "module",
   "version": "1.0.0-alpha.4",
   "description": "Histoire plugin to take screenshots with Percy for visual regression testing",
@@ -27,7 +27,7 @@
     "watch": "tsc -d -w --sourceMap"
   },
   "peerDependencies": {
-    "histoire": "workspace:^"
+    "longmo-histoire": "workspace:^"
   },
   "dependencies": {
     "@percy/sdk-utils": "^1.30.4",
@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.10.1",
-    "histoire": "workspace:*",
+    "longmo-histoire": "workspace:*",
     "typescript": "catalog:"
   }
 }

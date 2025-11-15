@@ -10,7 +10,7 @@ import type {
   PluginApiDevEvent,
   PreviewStoryCallback,
   ServerStory,
-} from '@histoire/shared'
+} from 'histoire-shared'
 import type { Context } from './context.js'
 import chokidar from 'chokidar'
 import fs from 'fs-extra'

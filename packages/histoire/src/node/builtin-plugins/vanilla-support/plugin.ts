@@ -1,4 +1,4 @@
-import type { Plugin } from '@histoire/shared'
+import type { Plugin } from 'histoire-shared'
 import { fileURLToPath } from 'node:url'
 import { dirname } from 'pathe'
 

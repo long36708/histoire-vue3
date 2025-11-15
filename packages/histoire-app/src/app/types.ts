@@ -5,7 +5,7 @@ export type {
   StoryFile,
   StoryLayout,
   Variant,
-} from '@histoire/shared'
+} from 'histoire-shared'
 
 export interface TreeLeaf {
   title: string

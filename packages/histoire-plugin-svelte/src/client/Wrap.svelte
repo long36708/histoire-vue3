@@ -5,7 +5,7 @@ import {
   h as _h,
   App as _App,
   reactive as _reactive,
-} from '@histoire/vendors/vue'
+} from 'histoire-vendors/vue'
 
 export let controlComponent
 export let value

@@ -1,6 +1,6 @@
 /// <reference types="vite/client" />
 
-import type { Ref } from '@histoire/vendors/vue'
+import type { Ref } from 'histoire-vendors/vue'
 
 global {
   interface Window {

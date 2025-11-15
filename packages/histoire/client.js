@@ -1,6 +1,6 @@
-import { logEvent } from '@histoire/app'
+import { logEvent } from 'histoire-app'
 
-export * from '@histoire/app'
+export * from 'histoire-app'
 
 export function isCollecting() {
   return process.env.HST_COLLECT === 'true'

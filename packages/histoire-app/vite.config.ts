@@ -35,13 +35,13 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      'floating-vue': '@histoire/vendors/floating-vue',
-      '@iconify/vue': '@histoire/vendors/iconify',
-      'pinia': '@histoire/vendors/pinia',
-      'scroll-into-view-if-needed': '@histoire/vendors/scroll',
-      'vue-router': '@histoire/vendors/vue-router',
-      '@vueuse/core': '@histoire/vendors/vue-use',
-      'vue': '@histoire/vendors/vue',
+      'floating-vue': 'histoire-vendors/floating-vue',
+      '@iconify/vue': 'histoire-vendors/iconify',
+      'pinia': 'histoire-vendors/pinia',
+      'scroll-into-view-if-needed': 'histoire-vendors/scroll',
+      'vue-router': 'histoire-vendors/vue-router',
+      '@vueuse/core': 'histoire-vendors/vue-use',
+      'vue': 'histoire-vendors/vue',
     },
   },
 
@@ -55,7 +55,7 @@ export default defineConfig({
     rollupOptions: {
       external: [
         /\$histoire/,
-        /@histoire/,
+        /^histoire-/,
         // eslint-disable-next-line ts/no-require-imports
         ...Object.keys(require('./package.json').dependencies),
       ],

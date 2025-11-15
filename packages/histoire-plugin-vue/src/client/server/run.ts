@@ -1,4 +1,4 @@
-import type { ServerRunPayload } from '@histoire/shared'
+import type { ServerRunPayload } from 'histoire-shared'
 import type { Vue3StorySetupApi, Vue3StorySetupHandler } from '../../helpers.js'
 // @ts-expect-error virtual module id
 import * as generatedSetup from 'virtual:$histoire-generated-global-setup'

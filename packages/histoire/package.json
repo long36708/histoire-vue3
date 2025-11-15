@@ -1,5 +1,5 @@
 {
-  "name": "histoire",
+  "name": "longmo-histoire",
   "type": "module",
   "version": "1.0.0-alpha.4",
   "description": "A fast story book powered by Vite",
@@ -47,10 +47,10 @@
   },
   "dependencies": {
     "@akryum/tinypool": "^0.3.1",
-    "@histoire/app": "workspace:^",
-    "@histoire/controls": "workspace:^",
-    "@histoire/shared": "workspace:^",
-    "@histoire/vendors": "workspace:^",
+    "histoire-app": "workspace:^",
+    "histoire-controls": "workspace:^",
+    "histoire-shared": "workspace:^",
+    "histoire-vendors": "workspace:^",
     "@types/markdown-it": "^14.1.2",
     "birpc": "^0.2.19",
     "change-case": "^5.4.4",

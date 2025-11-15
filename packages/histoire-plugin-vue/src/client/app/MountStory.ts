@@ -1,7 +1,7 @@
-import type { Story } from '@histoire/shared'
+import type { Story } from 'histoire-shared'
 import type {
   PropType as _PropType,
-} from '@histoire/vendors/vue'
+} from 'histoire-vendors/vue'
 import type { App, Component, VNode } from 'vue'
 import type { Vue3StorySetupApi, Vue3StorySetupHandler } from '../../helpers.js'
 import {
@@ -11,7 +11,7 @@ import {
   onUnmounted as _onUnmounted,
   ref as _ref,
   watch as _watch,
-} from '@histoire/vendors/vue'
+} from 'histoire-vendors/vue'
 // @ts-expect-error virtual module id
 import * as generatedSetup from 'virtual:$histoire-generated-global-setup'
 // @ts-expect-error virtual module id

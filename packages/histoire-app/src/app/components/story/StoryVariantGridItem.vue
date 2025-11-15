@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { PropType } from 'vue'
 import type { Story, Variant } from '../../types'
-import { HstCopyIcon } from '@histoire/controls'
+import { HstCopyIcon } from 'histoire-controls'
 import { Icon } from '@iconify/vue'
 import { useResizeObserver } from '@vueuse/core'
 import { computed, ref, toRefs } from 'vue'

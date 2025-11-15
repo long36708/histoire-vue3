@@ -1,12 +1,12 @@
 {
   "pnpm": {
     "overrides": {
-      "histoire": "./packages/histoire",
-      "@histoire/plugin-vue": "./packages/historie-plugin-vue",
-      "@histoire/plugin-svelte": "./packages/historie-plugin-svelte",
-      "@histoire/plugin-nuxt": "./packages/historie-plugin-nuxt",
-      "@histoire/plugin-percy": "./packages/historie-plugin-percy",
-      "@histoire/plugin-screenshot": "./packages/historie-plugin-screenshot"
+      "longmo-histoire": "./packages/histoire",
+      "histoire-plugin-vue": "./packages/historie-plugin-vue",
+      "histoire-plugin-svelte": "./packages/historie-plugin-svelte",
+      "histoire-plugin-nuxt": "./packages/historie-plugin-nuxt",
+      "histoire-plugin-percy": "./packages/historie-plugin-percy",
+      "histoire-plugin-screenshot": "./packages/historie-plugin-screenshot"
     }
   }
 }

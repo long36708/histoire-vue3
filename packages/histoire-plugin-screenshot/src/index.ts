@@ -1,5 +1,5 @@
 import type { FileOptions } from 'capture-website'
-import type { Plugin } from 'histoire'
+import type { Plugin } from 'longmo-histoire'
 import { defu } from 'defu'
 import fs from 'fs-extra'
 import path from 'pathe'
@@ -48,7 +48,7 @@ export function HstScreenshot(options: ScreenshotPluginOptions = {}): Plugin {
     })
   }
   return {
-    name: '@histoire/plugin-screenshot',
+    name: 'histoire-plugin-screenshot',
 
     onBuild: async (api) => {
       const { default: captureWebsite } = await import('capture-website')

@@ -1,4 +1,4 @@
-import type { ServerMarkdownFile } from '@histoire/shared'
+import type { ServerMarkdownFile } from 'histoire-shared'
 import type { Plugin as VitePlugin } from 'vite'
 import type { Context } from './context.js'
 import { kebabCase } from 'change-case'

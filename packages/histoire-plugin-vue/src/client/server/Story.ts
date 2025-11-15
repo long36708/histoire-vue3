@@ -1,4 +1,4 @@
-import type { ServerStory, ServerStoryFile, ServerVariant } from '@histoire/shared'
+import type { ServerStory, ServerStoryFile, ServerVariant } from 'histoire-shared'
 import type { PropType } from 'vue'
 import { defineComponent, inject, onMounted, provide, useAttrs } from 'vue'
 import { autoStubComponents } from './stub'

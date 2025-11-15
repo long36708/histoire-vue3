@@ -1,6 +1,6 @@
-import type { Variant } from '@histoire/shared'
+import type { Variant } from 'histoire-shared'
 import type { PropType } from 'vue'
-import { applyState } from '@histoire/shared'
+import { applyState } from 'histoire-shared'
 import { defineComponent, getCurrentInstance, inject, useAttrs } from 'vue'
 import { syncStateBundledAndExternal, toRawDeep } from './util.js'
 

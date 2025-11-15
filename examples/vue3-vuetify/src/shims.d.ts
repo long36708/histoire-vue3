@@ -1,4 +1,4 @@
-/// <reference types="histoire/client" />
+/// <reference types="longmo-histoire/client" />
 
 declare module 'vuetify'
 declare module 'vuetify/lib/components'

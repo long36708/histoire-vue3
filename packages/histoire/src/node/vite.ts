@@ -113,8 +113,8 @@ export async function getViteConfigWithPlugins(isServer: boolean, ctx: Context):
             'vscode-textmate',
           ]),
           exclude: [
-            'histoire',
-            '@histoire/vendors',
+            'longmo-histoire',
+            'histoire-vendors',
           ],
         },
         server: {
@@ -325,16 +325,16 @@ export async function getViteConfigWithPlugins(isServer: boolean, ctx: Context):
               ].reduce((acc, [name, entry]) => {
                 acc.push({
                   find: new RegExp(`^${name.replace(/\//g, '\\/')}$`),
-                  replacement: `@histoire/vendors/${entry}`,
+                  replacement: `histoire-vendors/${entry}`,
                 })
                 acc.push({
                   find: new RegExp(`^${name.replace(/\//g, '\\/')}\\/`),
-                  replacement: `@histoire/vendors/${entry}/`,
+                  replacement: `histoire-vendors/${entry}/`,
                 })
                 return acc
               }, [] as any[]),
 
-              { find: /@histoire\/controls$/, replacement: '@histoire/controls/src/index.ts' },
+              { find: /@histoire\/controls$/, replacement: 'histoire-controls/src/index.ts' },
             ],
           },
         }

@@ -1,4 +1,4 @@
-import type { Awaitable, Story, StoryProps, Variant, VariantProps } from '@histoire/shared'
+import type { Awaitable, Story, StoryProps, Variant, VariantProps } from 'histoire-shared'
 
 export interface App {
   el: HTMLElement

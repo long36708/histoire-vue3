@@ -1,4 +1,4 @@
-import type { ServerRunPayload } from '@histoire/shared'
+import type { ServerRunPayload } from 'histoire-shared'
 import type { SvelteComponent } from 'svelte'
 import type { SvelteStorySetupApi } from '../helpers.js'
 import { tick } from 'svelte'

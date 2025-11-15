@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { SelectPrompt, SelectPromptOption } from '@histoire/shared'
+import type { SelectPrompt, SelectPromptOption } from 'histoire-shared'
 import { Icon } from '@iconify/vue'
 import { computed, ref, watchEffect } from 'vue'
 import { useSelection } from '../../util/select.js'

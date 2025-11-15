@@ -103,7 +103,7 @@ export interface HistoireConfig {
      *
      * Example: ```{ primary: { 50: '#eef2ff', 100: '#e0e7ff', ..., 900: '#312e81' } }```
      *
-     * You can import `defaultColors` from `'histoire'` to use predefined colors or you can create your own colors from scratch.
+     * You can import `defaultColors` from `'longmo-histoire'` to use predefined colors or you can create your own colors from scratch.
      */
     colors?: {
       [key in CustomizableColors]?: key extends 'gray' ? {
