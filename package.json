@@ -21,6 +21,7 @@
     "test:examples": "pnpm run -r --workspace-concurrency 1 --filter \"./examples/vue**\"  test:examples",
     "test:examples:all": "pnpm run -r --workspace-concurrency 1 --filter \"./examples/**\" test:examples",
     "release": "pnpm run lint && pnpm run test && pnpm run build && sheep release -b main --force",
+    "release:longmo": "sheep release -b main --force",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
