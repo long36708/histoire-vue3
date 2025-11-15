@@ -1,3 +1,52 @@
+## v2.0.0
+
+[compare changes](https://github.com/Akryum/histoire/compare/v1.0.0-alpha.4...v2.0.0)
+
+### 🚀 Enhancements
+
+- **vue2:** 初始化Vue2插件及示例项目- 添加 histoire-plugin-vue2 插件基础结构 - 实现 Vue2 组件渲染和挂载逻辑 - 配置全局组件注册机制- 创建 Story 和 Variant 组件实现 - 添加 Vue2 版本的工具函数和状态同步逻辑 - 实现控制组件包装器以兼容不同版本Vue - 添加 RouterLink 组件存根用于测试环境 - 初始化 Vue2 示例项目配置和依赖 - 创建基础按钮组件及其故事书示例 - 添加代码生成相关的故事书示例组件 - 实现共享控件和状态管理示例 - 配置 Vite 和 PostCSS 构建工具 - 添加 Histoire 配置文件支持 Vue2 插件 ([217fefc](https://github.com/Akryum/histoire/commit/217fefc))
+
+### 🩹 Fixes
+
+- #816 storyMatch traversing directories correctly ([#818](https://github.com/Akryum/histoire/pull/818), [#816](https://github.com/Akryum/histoire/issues/816))
+- Vite deps optimizer not working ([bb826e1](https://github.com/Akryum/histoire/commit/bb826e1))
+- Component case variance ([#789](https://github.com/Akryum/histoire/pull/789))
+- Improve watcher logic, watch for relative paths based on storyMatch ([a39796e](https://github.com/Akryum/histoire/commit/a39796e))
+- Tailwind design system story styling ([29164b6](https://github.com/Akryum/histoire/commit/29164b6))
+
+### 💅 Refactors
+
+- **core:** 更新包引用名称以匹配新的命名约定 ([f76eb47](https://github.com/Akryum/histoire/commit/f76eb47))
+- **client:** 更新客户端导入路径至 longmo-histoire ([b0579f7](https://github.com/Akryum/histoire/commit/b0579f7))
+
+### 📖 Documentation
+
+- Add story of HstCopyIcon ([#717](https://github.com/Akryum/histoire/pull/717))
+- Fix HstCopyIcon story ([137a67c](https://github.com/Akryum/histoire/commit/137a67c))
+- Update node version ([ad49959](https://github.com/Akryum/histoire/commit/ad49959))
+
+### 🏡 Chore
+
+- **release:** 发布新版本并更新依赖配置- 将 histoire-plugin-vue2 版本从 0.17.17 更新至 1.0.0-alpha.4 - 更新 vite依赖引用方式为 catalog: - 添加 release:longmo 脚本用于强制发布到 main 分支 ([7e13a7d](https://github.com/Akryum/histoire/commit/7e13a7d))
+- **release:** 更新 release:longmo 脚本以包含构建步骤- 在 release:longmo 命令前添加 pnpm run build - 确保发布流程包含完整的构建过程 ([bd48d38](https://github.com/Akryum/histoire/commit/bd48d38))
+
+### ✅ Tests
+
+- **lint:** Fix ([fc7d23e](https://github.com/Akryum/histoire/commit/fc7d23e))
+- **lint:** Fix ([04198ed](https://github.com/Akryum/histoire/commit/04198ed))
+
+### 🤖 CI
+
+- Run tests on all branches ([f257c74](https://github.com/Akryum/histoire/commit/f257c74))
+
+### ❤️ Contributors
+
+- Longmo <3131521901@qq.com>
+- Guillaume Chau ([@Akryum](http://github.com/Akryum))
+- Reslear ([@reslear](http://github.com/reslear))
+- Eugen Istoc <eugenistoc@gmail.com>
+- Waldemar Enns ([@waldemarennsaed](http://github.com/waldemarennsaed))
+
 ## v2.0.0-0
 
 [compare changes](https://github.com/Akryum/histoire/compare/v1.0.0-alpha.4...v2.0.0-0)
