@@ -1,6 +1,8 @@
 packages:
   - 'packages/*'
+#  - '!packages/histoire-plugin-vue2'
   - 'examples/*'
+#  - '!examples/vue2'
   - docs
 catalog:
   '@vueuse/core': ^12.0.0
