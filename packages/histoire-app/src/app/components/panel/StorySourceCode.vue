@@ -1,10 +1,13 @@
 <script lang="ts" setup>
 import type { Highlighter } from 'shiki'
 import type { Story, Variant } from '../../types'
+import { Icon } from '@iconify/vue'
 import { HstCopyIcon } from 'histoire-controls'
 import { unindent } from 'histoire-shared'
-import { Icon } from '@iconify/vue'
-import { createHighlighter } from 'shiki'
+// import { createHighlighter } from 'shiki'
+// `shiki/core` 不包含任何主题、语言或 wasm 二进制
+import { createHighlighterCore } from 'shiki/core'
+import { createOnigurumaEngine } from 'shiki/engine/oniguruma'
 import { clientSupportPlugins } from 'virtual:$histoire-support-plugins-client'
 import { computed, markRaw, nextTick, onMounted, ref, shallowRef, watch, watchEffect } from 'vue'
 import { isDark } from '../../util/dark'
@@ -87,22 +90,41 @@ const displayedSourceCode = computed(() => {
 // HTML render
 
 onMounted(async () => {
-  highlighter.value = await createHighlighter({
-    langs: [
-      'html',
-      'jsx',
-    ],
+  highlighter.value = await createHighlighterCore({
     themes: [
-      'github-light',
-      'github-dark',
+      // 也可以使用动态导入来进行代码分割
+      import('shiki/themes/github-dark'),
+      import('shiki/themes/github-light'),
+      import('shiki/themes/one-dark-pro'),
     ],
+    // langs: Object.keys(bundledLanguages),
+    langs: [
+      import('shiki/langs/javascript'),
+      import('shiki/langs/typescript'),
+      import('shiki/langs/vue'),
+      // shiki 会尝试使用模块的默认导出
+      () => import('shiki/langs/css'),
+    ],
+    // `shiki/wasm` 包含内嵌为 base64 字符串的 wasm 二进制
+    engine: createOnigurumaEngine(import('shiki/wasm')),
   })
+  // highlighter.value = await createHighlighter({
+  //   langs: [
+  //     'html',
+  //     'jsx',
+  //   ],
+  //   themes: [
+  //     'github-light',
+  //     'github-dark',
+  //   ],
+  // })
 })
 
 const sourceHtml = computed(() => displayedSourceCode.value
   ? highlighter.value?.codeToHtml(displayedSourceCode.value, {
     lang: 'html',
-    theme: isDark.value ? 'github-dark' : 'github-light',
+    // theme: isDark.value ? 'github-dark' : 'github-light',
+    theme: isDark.value ? 'github-dark' : 'one-dark-pro',
   })
   : '')
 

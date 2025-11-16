@@ -13,6 +13,14 @@ import micromatch from 'micromatch'
 import path from 'pathe'
 import pc from 'picocolors'
 import { bundledLanguages, createHighlighter } from 'shiki'
+// `shiki/core` 不包含任何主题、语言或 wasm 二进制
+// @ts-ignore
+// import { createHighlighterCore } from 'shiki/core'
+// @ts-ignore
+// import { createOnigurumaEngine } from 'shiki/engine/oniguruma'
+// @ts-ignore
+// import githubDark from 'shiki/themes/github-dark'
+// @ts-ignore
 import { addStory, notifyStoryChange, removeStory } from './stories.js'
 import { slugify } from './util/slugify.js'
 
@@ -29,13 +37,42 @@ function notifyMarkdownListChange() {
 }
 
 export async function createMarkdownRenderer(ctx: Context) {
+  // 将 WASM 作为资源导入
+  // @ts-ignore
+  // const highlighter = await createHighlighterCore({
+  //   themes: [
+  //     // githubDark,
+  //     // 也可以使用动态导入来进行代码分割
+  //     // @ts-ignore
+  //     // import('shiki/themes/github-dark'),
+  //     // @ts-ignore
+  //     // import('shiki/themes/github-light'),
+  //     // @ts-ignore
+  //     // import('shiki/themes/one-dark-pro'),
+  //   ],
+  //   // langs: Object.keys(bundledLanguages), // not ideal but markdown-it does not provide async highlight
+  //   // langs: [
+  //   //   // @ts-ignore
+  //   //   import('shiki/langs/javascript'),
+  //   //   // @ts-ignore
+  //   //   import('shiki/langs/typescript'),
+  //   //   // @ts-ignore
+  //   //   import('shiki/langs/vue'),
+  //   // ],
+  //   // `shiki/wasm` 包含内嵌为 base64 字符串的 wasm 二进制
+  //   // @ts-ignore
+  //   engine: createOnigurumaEngine(import('shiki/wasm')),
+  // })
+
   const highlighter = await createHighlighter({
     themes: ['github-dark'],
     langs: Object.keys(bundledLanguages), // not ideal but markdown-it does not provide async highlight
   })
-
   const md = new MarkdownIt({
-    highlight: (code, lang) => `<div class="htw-relative htw-not-prose __histoire-code"><div class="htw-absolute htw-top-0 htw-right-0 htw-text-xs htw-text-white/40">${lang}</div>${highlighter.codeToHtml(code, { theme: 'github-dark', lang })}</div>`,
+    highlight: (code, lang) => `<div class="htw-relative htw-not-prose __histoire-code"><div class="htw-absolute htw-top-0 htw-right-0 htw-text-xs htw-text-white/40">${lang}</div>${highlighter.codeToHtml(code, {
+      theme: 'github-dark',
+      lang,
+    })}</div>`,
     linkify: true,
     html: true,
     breaks: false,
