@@ -1,16 +1,9 @@
-import type {
-  InlineConfig,
-  UserConfig as ViteConfig,
-  Plugin as VitePlugin,
-} from 'vite'
+import type { InlineConfig, UserConfig as ViteConfig, Plugin as VitePlugin } from 'vite'
 import type { Context } from './context.js'
 import { createRequire } from 'node:module'
 import { lookup as lookupMime } from 'mrmime'
 import { dirname, join, relative } from 'pathe'
-import {
-  loadConfigFromFile as loadViteConfigFromFile,
-  mergeConfig as mergeViteConfig,
-} from 'vite'
+import { loadConfigFromFile as loadViteConfigFromFile, mergeConfig as mergeViteConfig } from 'vite'
 import { APP_PATH, TEMP_PATH } from './alias.js'
 import { createMarkdownPlugins } from './markdown.js'
 import { notifyStoryChange } from './stories.js'
@@ -61,7 +54,10 @@ export interface ViteConfigWithPlugins {
 }
 
 export async function getViteConfigWithPlugins(isServer: boolean, ctx: Context): Promise<ViteConfigWithPlugins> {
-  const userViteConfigFile = await loadViteConfigFromFile({ command: ctx.mode === 'dev' ? 'serve' : 'build', mode: ctx.mode })
+  const userViteConfigFile = await loadViteConfigFromFile({
+    command: ctx.mode === 'dev' ? 'serve' : 'build',
+    mode: ctx.mode,
+  })
   const userViteConfig = mergeViteConfig(userViteConfigFile?.config ?? {}, { server: { port: 6006 } })
 
   const inlineConfig = await mergeHistoireViteConfig(userViteConfig, ctx)
@@ -186,6 +182,22 @@ export async function getViteConfigWithPlugins(isServer: boolean, ctx: Context):
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="">
+    <script>
+   // Define global variable
+   IconifyProviders = {
+       // Empty prefix: overwrite default API provider configuration
+       '': {
+           // Use custom API first, use Iconify public API as backup
+           resources: [
+               ${process.env.HISTOIRE_ICONIFY_API ? process.env.HISTOIRE_ICONIFY_API : 'http://10.3.72.210:3000'}, 
+               'http://localhost:3000',
+               'https://api.iconify.design',
+           ],
+           // Wait for 1 second before switching API hosts
+           rotate: 1000,
+       },
+   };
+</script>
 </head>
 <body>
   <div id="app"></div>
@@ -226,6 +238,22 @@ export async function getViteConfigWithPlugins(isServer: boolean, ctx: Context):
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="">
+        <script>
+   // Define global variable
+   IconifyProviders = {
+       // Empty prefix: overwrite default API provider configuration
+       '': {
+           // Use custom API first, use Iconify public API as backup
+           resources: [
+               ${process.env.HISTOIRE_ICONIFY_API ? process.env.HISTOIRE_ICONIFY_API : 'http://10.3.72.210:3000'},
+               'http://localhost:3000',
+               'https://api.iconify.design',
+           ],
+           // Wait for 1 second before switching API hosts
+           rotate: 1000,
+       },
+   };
+</script>
     ${ctx.config.theme?.favicon ? `<link rel="icon" type="${lookupMime(ctx.config.theme.favicon)}" href="${server.config.base}${ctx.config.theme.favicon}"/>` : ''}
   </head>
   <body>
