@@ -1,7 +1,7 @@
 {
   "name": "histoire-plugin-vue2",
   "type": "module",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Histoire plugin for Vue.js 2 support",
   "author": {
     "name": "Guillaume Chau"
