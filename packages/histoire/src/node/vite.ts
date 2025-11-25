@@ -189,7 +189,7 @@ export async function getViteConfigWithPlugins(isServer: boolean, ctx: Context):
        '': {
            // Use custom API first, use Iconify public API as backup
            resources: [
-               ${process.env.HISTOIRE_ICONIFY_API ? process.env.HISTOIRE_ICONIFY_API : 'http://10.3.72.210:3000'}, 
+               'http://10.3.72.210:3000',
                'http://localhost:3000',
                'https://api.iconify.design',
            ],
@@ -245,7 +245,7 @@ export async function getViteConfigWithPlugins(isServer: boolean, ctx: Context):
        '': {
            // Use custom API first, use Iconify public API as backup
            resources: [
-               ${process.env.HISTOIRE_ICONIFY_API ? process.env.HISTOIRE_ICONIFY_API : 'http://10.3.72.210:3000'},
+               'http://10.3.72.210:3000',
                'http://localhost:3000',
                'https://api.iconify.design',
            ],
