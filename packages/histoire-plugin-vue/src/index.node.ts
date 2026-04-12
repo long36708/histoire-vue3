@@ -27,7 +27,8 @@ export function HstVue(): Plugin {
               enforce: 'post',
               transform(code, id) {
                 // Remove vue warnings about unknown components
-                if ((this.meta as any).histoire?.isCollecting && id.endsWith('.vue')) {
+                const context = this as any;
+                if (context.meta?.histoire?.isCollecting && id.endsWith('.vue')) {
                   return `const _stubComponent = (name) => ['Story','Variant'].some(validName => name.toLowerCase() === validName.toLowerCase()) ? _resolveComponent(name) : ({ render: () => null });${code?.replaceAll('_resolveComponent(', '_stubComponent(') ?? ''}`
                 }
               },

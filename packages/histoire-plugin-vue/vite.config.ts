@@ -1,6 +1,12 @@
 import fs from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { globbySync } from 'globby'
 import { defineConfig } from 'vite'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const bundledDir = path.resolve(__dirname, 'dist/bundled')
+const unwantedPrefix = path.join('packages', 'histoire-plugin-vue', 'src')
 
 export default defineConfig({
   plugins: [
@@ -15,6 +21,35 @@ export default defineConfig({
         }
       },
       closeBundle() {
+        // 1. Flatten the unwanted directory prefix caused by Rolldown's preserveModulesRoot
+        try {
+          const files = globbySync(path.join(bundledDir, '**/*').replace(/\\/g, '/'))
+          for (const file of files) {
+            const rel = path.relative(bundledDir, file)
+            const normalizedRel = rel.replace(/\\/g, '/')
+            if (normalizedRel.startsWith(unwantedPrefix.replace(/\\/g, '/'))) {
+              const newRel = normalizedRel.slice(unwantedPrefix.length + 1)
+              const newPath = path.join(bundledDir, newRel)
+              fs.mkdirSync(path.dirname(newPath), { recursive: true })
+              fs.renameSync(file, newPath)
+            }
+          }
+          // Clean up empty dirs
+          const dirs = globbySync(path.join(bundledDir, '**').replace(/\\/g, '/'), { onlyDirectories: true })
+          for (const dir of dirs.sort().reverse()) {
+            try {
+              if (fs.readdirSync(dir).length === 0) {
+                fs.rmdirSync(dir)
+              }
+            }
+            catch {}
+          }
+        }
+        catch (e) {
+          console.error(e)
+        }
+
+        // 2. Restore dynamic imports
         try {
           const files = globbySync('./dist/**/*.js')
           for (const file of files) {
@@ -38,11 +73,15 @@ export default defineConfig({
       entry: '',
       formats: ['es'],
     },
-    rollupOptions: {
+    rolldownOptions: {
       external: [
         /\$histoire/,
         /^histoire-/,
         'vue',
+        'change-case',
+        'globby',
+        'launch-editor',
+        'pathe',
       ],
 
       input: [

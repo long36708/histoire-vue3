@@ -185,7 +185,7 @@ export async function build(ctx: Context) {
   }
 
   const results = await viteBuild(buildViteConfig)
-  const result = Array.isArray(results) ? results[0] : results as RollupOutput
+  const result = Array.isArray(results) ? results[0] : results as unknown as RollupOutput
 
   const styleOutput = result.output.find(o => o.name === 'style.css' && o.type === 'asset')
 

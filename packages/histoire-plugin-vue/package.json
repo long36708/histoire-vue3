@@ -18,11 +18,11 @@
   "exports": {
     "./client": {
       "types": "./dist/client/client.d.ts",
-      "default": "./dist/bundled/client/client.js"
+      "default": "./dist/bundled/client.js"
     },
     "./collect": {
       "types": "./dist/client/server.d.ts",
-      "default": "./dist/bundled/client/server.js"
+      "default": "./dist/bundled/server.js"
     },
     "./components": {
       "types": "./components.d.ts"
